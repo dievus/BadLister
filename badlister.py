@@ -62,7 +62,7 @@ def generate_leetspeak_combinations(word_list):
 
 
 if __name__ == "__main__":
-    banner()
+    #banner()
     # Get the file name from the user
     try:
         file_name = input("Enter the file name containing the list of words: ")
