@@ -10,7 +10,7 @@ def banner():
     ██╔══██╗██║     ██╔══██║██║     ██╔═██╗ ██║     ██║╚════██║   ██║   ██╔══╝  ██╔══██╗
     ██████╔╝███████╗██║  ██║╚██████╗██║  ██╗███████╗██║███████║   ██║   ███████╗██║  ██║
     ╚═════╝ ╚══════╝╚═╝  ╚═╝ ╚═════╝╚═╝  ╚═╝╚══════╝╚═╝╚══════╝   ╚═╝   ╚══════╝╚═╝  ╚═╝
-               A wordlist generator for blacklisting common password strings
+               A wordlist generator for generating common password strings
                                         v1.0
                           Another tool created by TheMayor
     """
@@ -69,7 +69,7 @@ if __name__ == "__main__":
 
         with open(file_name, "r") as file:
             word_list = [line.strip() for line in file.readlines()]
-        output_file_name = "blacklisted_passwords.txt"
+        output_file_name = "denylist_passwords.txt"
         leetspeak_combinations = generate_leetspeak_combinations(word_list)
         print(f"\nNumber of words generated: {len(leetspeak_combinations)}\n")
         with open(output_file_name, "w") as output_file:
