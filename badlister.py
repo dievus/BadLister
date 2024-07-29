@@ -4,15 +4,16 @@ import itertools
 def banner():
     print(
         """
-    ██████╗ ██╗      █████╗  ██████╗██╗  ██╗██╗     ██╗███████╗████████╗███████╗██████╗
-    ██╔══██╗██║     ██╔══██╗██╔════╝██║ ██╔╝██║     ██║██╔════╝╚══██╔══╝██╔════╝██╔══██╗
-    ██████╔╝██║     ███████║██║     █████╔╝ ██║     ██║███████╗   ██║   █████╗  ██████╔╝
-    ██╔══██╗██║     ██╔══██║██║     ██╔═██╗ ██║     ██║╚════██║   ██║   ██╔══╝  ██╔══██╗
-    ██████╔╝███████╗██║  ██║╚██████╗██║  ██╗███████╗██║███████║   ██║   ███████╗██║  ██║
-    ╚═════╝ ╚══════╝╚═╝  ╚═╝ ╚═════╝╚═╝  ╚═╝╚══════╝╚═╝╚══════╝   ╚═╝   ╚══════╝╚═╝  ╚═╝
-               A wordlist generator for generating common password strings
-                                        v1.0
-                          Another tool created by TheMayor
+
+    ██████   █████  ██████  ██      ██ ███████ ████████ ███████ ██████  
+    ██   ██ ██   ██ ██   ██ ██      ██ ██         ██    ██      ██   ██ 
+    ██████  ███████ ██   ██ ██      ██ ███████    ██    █████   ██████  
+    ██   ██ ██   ██ ██   ██ ██      ██      ██    ██    ██      ██   ██ 
+    ██████  ██   ██ ██████  ███████ ██ ███████    ██    ███████ ██   ██                                                                   
+                                                                    
+        A wordlist generator for generating common password strings
+                                v1.0
+                    Another tool created by TheMayor
     """
     )
 
@@ -62,7 +63,7 @@ def generate_leetspeak_combinations(word_list):
 
 
 if __name__ == "__main__":
-    #banner()
+    # banner()
     # Get the file name from the user
     try:
         file_name = input("Enter the file name containing the list of words: ")
@@ -77,16 +78,20 @@ if __name__ == "__main__":
         # Generate leetspeak combinations
         leetspeak_combinations = generate_leetspeak_combinations(word_list)
         print(f"Leetspeak combinations saved to '{output_file_name}'\n")
-        output_list = input("[!] Do you want to output combinations to terminal? (y/n)? ")
+        output_list = input(
+            "[!] Do you want to output combinations to terminal? (y/n)? "
+        )
         if output_list.lower() == "y":
             # Print leetspeak combinations
             print("\nLeetspeak List:")
             print("\n".join(leetspeak_combinations))
         else:
-            print('\nQuitting!')
+            print("\nQuitting!")
             quit()
     except KeyboardInterrupt:
-        print('\n\nYou either fat fingered this, or something else. Either way, Quitting!')
+        print(
+            "\n\nYou either fat fingered this, or something else. Either way, Quitting!"
+        )
     except FileNotFoundError:
         print(f"\n[-] Error: File '{file_name}' not found. Retry with a valid file.\n")
         exit()
