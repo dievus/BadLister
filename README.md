@@ -4,7 +4,7 @@
 
 
 <p align="center">
-  <img src="https://github.com/dievus/BadLister/blob/main/images/example.png" />
+  <img src="https://github.com/dievus/BadLister/blob/main/images/exampleimages.png" />
 </p>
 I regularly do internal, external, and web application penetration tests where clients struggle with users utilizing common passwords, but do not know how to develop a list to prevent them.
 
